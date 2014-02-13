@@ -472,7 +472,7 @@ def building_area_increase():
 			if actual_stories < 2:
 				sprinkler_area_increase = 3
 			
-			elif actual_stories <= 2:
+			elif actual_stories >= 2:
 				sprinkler_area_increase = 2
 
 			print "Your sprinkler system qualifies you for a building area increase.\n"
