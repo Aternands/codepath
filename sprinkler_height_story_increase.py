@@ -14,7 +14,7 @@ def sprinkler_height_story_increase(variables):
 
 	if variables["has_sprinkler"] not in valid_yes_no:
 		print "You didn't enter yes or no. Let's try for a sprinkler increase again.\n"
-		sprinkler_height_story_increase()
+		sprinkler_height_story_increase(variables)
 
 	if variables["has_sprinkler"] == "no":
 		print "Okay, your building numbers won't get a sprinkler system increase.\n"
@@ -40,14 +40,14 @@ def sprinkler_height_story_increase(variables):
 		return variables
 
 	else:
-		variables["sprinkler_for_fire_resistance_rating"] = raw_input('Are you using the sprinkler system to substitute'
+		variables["sprinkler_for_fire_resistance_rating"] = raw_input('Are you using the sprinkler system to substitute '
 		'for 1-hour rated construction? If so, you cannot use it to increase your allowable numbers. Enter yes or no.\n') #table 601 note d
 
 		print "\n"
 
 		if variables["sprinkler_for_fire_resistance_rating"] not in valid_yes_no:
 			print "You didn't enter yes or no. Let's try for a sprinkler increase again.\n"
-			sprinkler_height_story_increase()
+			sprinkler_height_story_increase(variables)
 
 		if variables["sprinkler_for_fire_resistance_rating"] == "yes":
 			print "Okay, your allowable numbers won't get a sprinkler system increase.\n"

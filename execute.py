@@ -41,23 +41,21 @@ variables = {
 
 
 
-
+# FUTURE CODE: section that asks whether building is separated into multiple separated areas
+# 				that are considered separate buildings. Evaluated these one by one and then
+#				show total combined numbers.
 
 
 
 # QUESTION should ha_matrix dictionary keys and values be strings or something else?
+# QUESTION do i need .pyc files....can they go somewhere else
+
 
 
 
 
 
 initial_numbers(ha_matrix, variables)
-
-
-
-
-
-
 
 
 
@@ -79,19 +77,9 @@ else:
 
 
 
-
-
 actual_height(variables)
 
 actual_stories(variables)
-
-
-
-
-
-
-
-
 
 
 			
