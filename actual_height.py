@@ -11,7 +11,7 @@ def actual_height(variables):
 
 	if variables["actual_height"] > variables["max_height"]:
 		print "You chose a height that's higher than the allowable height. Let's try again.\n"
-		actual_height(variables)
+		return actual_height(variables)
 
 	else:
 		print "Okay, your building's height is %s feet.\n" % variables["actual_height"]

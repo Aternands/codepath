@@ -1,0 +1,29 @@
+Here are the results of your building's code analysis:
+
+
+Occupancy Group: b
+
+Construction Type: iiib
+
+-----------------------------------------------
+
+Is Building Sprinklered (yes/no): yes
+
+-----------------------------------------------
+
+Maximum Building Height: 75 feet
+
+Actual Height: 45 feet
+
+Maximum Number of Stories: 3
+
+Actual Number of Stories: 3
+
+Maximum Area per Story: 60958.3333333 square feet
+
+Actual Area of Largest Story: None square feet
+
+Maximum Area of Building: 182875.0 square feet
+
+Actual Area of Building None square feet
+

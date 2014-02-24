@@ -13,7 +13,7 @@ def actual_stories(variables):
 
 	if variables["actual_stories"] > variables["max_stories"]:
 		print "You chose a number of stories that's larger than the allowable number. Let's try again.\n"
-		actual_stories(variables)
+		return actual_stories(variables)
 
 	else:
 		print "Okay, your building has %s stories above the grade plane.\n" % variables["actual_stories"]

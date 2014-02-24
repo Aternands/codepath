@@ -2,6 +2,10 @@
 
 def initial_numbers(ha_matrix, variables):
 
+	#add code to deal with unusual situations in section 503 and 504.1
+
+	#CODE QUESTION: what about min areas for sprinkler systems in section 903...........add these
+
 	
 
 	variables["group"] = raw_input('What is your occupancy group? Your choices are: \n\
@@ -17,7 +21,7 @@ def initial_numbers(ha_matrix, variables):
 	if variables["group"] not in valid_groups:
 		print ("You didn't chose a valid occupancy group. Please select a new occupancy group and construction type.\n"
 				"\n")
-		initial_numbers(ha_matrix, variables)
+		return initial_numbers(ha_matrix, variables)
 	
 
 	variables["cons_type"] = raw_input('What is your construction type? \n\
@@ -31,7 +35,7 @@ def initial_numbers(ha_matrix, variables):
 	if variables["cons_type"] not in valid_cons_types:
 		print ("You didn't chose a valid construction type. Please select a new occupancy group and construction type.\n"
 				'\n')
-		initial_numbers(ha_matrix, variables)
+		return initial_numbers(ha_matrix, variables)
 
 	table_entry = str(variables["group"] + "_" + variables["cons_type"])
 
@@ -40,7 +44,8 @@ def initial_numbers(ha_matrix, variables):
 
 	if "np" in a:
 		print "You aren't allowed to use that construction type with that occupancy. Please choose a different combination.\n"
-		initial_numbers(ha_matrix, variables)
+		
+		return initial_numbers(ha_matrix, variables)
 
 	
 

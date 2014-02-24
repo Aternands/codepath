@@ -1,13 +1,68 @@
 	
+# def public_way_status():
+# 	pw_status = raw_input("Is your building surrounded and adjoined by public ways or yards that are"
+# 							" at least 60 feet wide? Enter yes or no.\n")
+
+# 	valid_yes_no = ["yes", "no"]
+
+# 	if pw_status not in valid_yes_no:
+# 		print "You didn't enter yes or no. Let's try again.\n"
+
+# 		print "\n"
+
+# 		return public_way_status()
+
+# 	if pw_status == "yes":
+# 		return pw_status
+
+# 	if pw_status == "no":
+# 		pw_status = raw_input ("Okay, let's try this. Is your building surrounded and adjoined by public ways or yards that are"
+# 				" at least 40 feet wide? Enter yes or no.\n")
+
+# 		if pw_status not in valid_yes_no:
+# 		print "You didn't enter yes or no. Let's try again.\n"
+
+# 		print "\n"
+
+# 		if pw_status == "no":
+# 			return pw_status
+
+# 		if pw_status == "yes":
+# 			reduced_pw_status = raw_input("Your building might still qualify for the special case if it meets a")#......................
+
+
+
+		#finish this
+
+
 
 
 def building_area_increase(variables):
 
 
+
+
+	#section 507 unlimited area buildings goes here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	#Building Area increase from frontage
-
-
-	print "First, we'll look at frontage.\n"
 
 	perimeter = raw_input("Please enter the length in feet of your building's perimeter.\n")
 
@@ -15,7 +70,7 @@ def building_area_increase(variables):
 
 	perimeter = float(perimeter)
 
-	print "Okay, your building's perimeter length is %.2f feet.\n" % perimeter
+	print "Okay, your building's perimeter length is %.1f feet.\n" % perimeter
 
 	print "\n"
 
@@ -35,7 +90,9 @@ def building_area_increase(variables):
 		print ("That can't be right... You've entered a frontage length that's larger than"
 				" the overall perimeter length. Let's try for a building area increase again.\n")
 
-	print "Okay, your building's frontage length is %.2f feet.\n" % frontage
+		return building_area_increase(variables)
+
+	print "Okay, your building's qualified frontage length is %.1f feet.\n" % frontage
 
 	print "\n"
 
@@ -47,7 +104,7 @@ def building_area_increase(variables):
 		frontage_increase_amount = 0
 		print ("To qualify for a building area increase from frontage, at least"
 				" 25 percent of your building's perimeter must have qualified frontage on a public way or"
-				" qualified open space. Only %.2f percent of your building's perimeter has qualified frontage,"
+				" qualified open space. Only %.1f percent of your building's perimeter has qualified frontage,"
 				" so you won't get an increase.\n") % actual_frontage_percentage
 
 		print "\n"
@@ -66,7 +123,7 @@ def building_area_increase(variables):
 
 			print "\n"
 
-			building_area_increase(variables)
+			return building_area_increase(variables)
 
 
 		if width_consistent == "yes":
@@ -82,10 +139,10 @@ def building_area_increase(variables):
 
 				print "\n"
 
-				building_area_increase(variables)
+				return building_area_increase(variables)
 
 			if 20 <= width <= 30:
-				print "Okay, your width is %.2f.\n" % width
+				print "Okay, your width is %.1f.\n" % width
 
 				print "\n"
 
@@ -112,10 +169,10 @@ def building_area_increase(variables):
 
 				print "\n"
 
-				building_area_increase(variables)
+				return building_area_increase(variables)
 
 			if 20 <= width <= 30:
-				print "Okay, your width is %s.\n" % width
+				print "Okay, your weighted average width is %s.\n" % width
 
 				print "\n"
 
@@ -125,7 +182,7 @@ def building_area_increase(variables):
 
 				print "\n"
 
-				building_area_increase(variables)
+				return building_area_increase(variables)
 
 
 
@@ -135,9 +192,14 @@ def building_area_increase(variables):
 		frontage_increase_amount = (variables["max_area"] * frontage_area_increase)
 
 		print ("Great. The frontage calculation increased your allowable building"
-				" area by %.2f square feet.\n") % frontage_increase_amount
+				" area by %.1f square feet.\n") % frontage_increase_amount
 
 		print "\n"
+
+
+		# add 506.2.1 exception
+		# additional info about open space in 506.2.2 - should be in final version
+		
 
 
 
@@ -164,6 +226,8 @@ def building_area_increase(variables):
 					" don't get allowable building area increases from sprinklers.\n")
 
 			print "\n"
+
+			# fix this...the function continues to the next conditional rather than going to final calculation below.
 
 		# 506.3 exception 2 for H-2 and H-3 occupancies. figure out and add this condition
 
@@ -209,13 +273,13 @@ def building_area_increase(variables):
 
 	elif initial_area_value < variables["max_area"]:
 		print ("Okay, based on the frontage and sprinkler calculations,"
-				" your, allowable building area increased to %s square feet.\n") % variables["max_area"]
+				" your allowable building area increased to %.1f square feet.\n") % variables["max_area"]
 
 		print "\n"
 
 
 	return variables
-				
+			
 
 
 
