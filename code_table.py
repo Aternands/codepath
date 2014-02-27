@@ -19,8 +19,8 @@ ha_matrix = {
 			
 			# # Group A-2
 			
-			"a2_1a": ("unlimited", "unlimited", "unlimited"), 
-			"a2_1b": ("160", "11", "unlimited" ),
+			"a2_ia": ("unlimited", "unlimited", "unlimited"), 
+			"a2_ib": ("160", "11", "unlimited" ),
 			"a2_iia": ("65", "3", "15500" ),
 			"a2_iib": ("55", "2", "9500" ),
 			"a2_iiia": ("65", "3", "14000" ),
@@ -31,8 +31,8 @@ ha_matrix = {
 			
 			# # Group A-3
 			
-			"a3_1a": ("unlimited", "unlimited", "unlimited"), 
-			"a3_1b": ("160", "11", "unlimited" ),
+			"a3_ia": ("unlimited", "unlimited", "unlimited"), 
+			"a3_ib": ("160", "11", "unlimited" ),
 			"a3_iia": ("65", "3", "15500" ),
 			"a3_iib": ("55", "2", "9500" ),
 			"a3_iiia": ("65", "3", "14000" ),
@@ -43,8 +43,8 @@ ha_matrix = {
 
 			# # Group A-4
 			
-			"a4_1a": ("unlimited", "unlimited", "unlimited"), 
-			"a4_1b": ("160", "11", "unlimited" ),
+			"a4_ia": ("unlimited", "unlimited", "unlimited"), 
+			"a4_ib": ("160", "11", "unlimited" ),
 			"a4_iia": ("65", "3", "15500" ),
 			"a4_iib": ("55", "2", "9500" ),
 			"a4_iiia": ("65", "3", "14000" ),
@@ -55,8 +55,8 @@ ha_matrix = {
 
 			# # Group A-5
 			
-			"a5_1a": ("unlimited", "unlimited", "unlimited"), 
-			"a5_1b": ("unlimited", "unlimited", "unlimited" ),
+			"a5_ia": ("unlimited", "unlimited", "unlimited"), 
+			"a5_ib": ("unlimited", "unlimited", "unlimited" ),
 			"a5_iia": ("unlimited", "unlimited", "unlimited" ),
 			"a5_iib": ("unlimited", "unlimited", "unlimited" ),
 			"a5_iiia": ("unlimited", "unlimited", "unlimited" ),
@@ -67,8 +67,8 @@ ha_matrix = {
 
 			# # Group B
 			
-			"b_1a": ("unlimited", "unlimited", "unlimited"), 
-			"b_1b": ("160", "11", "unlimited" ),
+			"b_ia": ("unlimited", "unlimited", "unlimited"), 
+			"b_ib": ("160", "11", "unlimited" ),
 			"b_iia": ("65", "5", "37500" ),
 			"b_iib": ("55", "3", "23000" ),
 			"b_iiia": ("65", "5", "28500" ),
@@ -79,8 +79,8 @@ ha_matrix = {
 
 			# # Group E
 			
-			"e_1a": ("unlimited", "unlimited", "unlimited"), 
-			"e_1b": ("160", "5", "unlimited" ),
+			"e_ia": ("unlimited", "unlimited", "unlimited"), 
+			"e_ib": ("160", "5", "unlimited" ),
 			"e_iia": ("65", "3", "26500" ),
 			"e_iib": ("55", "2", "14500" ),
 			"e_iiia": ("65", "3", "23500" ),
@@ -91,8 +91,8 @@ ha_matrix = {
 
 			# # Group F-1
 			
-			"f1_1a": ("unlimited", "unlimited", "unlimited"), 
-			"f1_1b": ("160", "11", "unlimited" ),
+			"f1_ia": ("unlimited", "unlimited", "unlimited"), 
+			"f1_ib": ("160", "11", "unlimited" ),
 			"f1_iia": ("65", "4", "25000" ),
 			"f1_iib": ("55", "2", "15500" ),
 			"f1_iiia": ("65", "3", "19000" ),
@@ -103,8 +103,8 @@ ha_matrix = {
 
 			# # Group F-2
 			
-			"f2_1a": ("unlimited", "unlimited", "unlimited"), 
-			"f2_1b": ("160", "11", "unlimited" ),
+			"f2_ia": ("unlimited", "unlimited", "unlimited"), 
+			"f2_ib": ("160", "11", "unlimited" ),
 			"f2_iia": ("65", "5", "37500" ),
 			"f2_iib": ("55", "3", "23000" ),
 			"f2_iiia": ("65", "4", "28500" ),
@@ -115,8 +115,8 @@ ha_matrix = {
 
 			# # Group H-1
 			
-			"h1_1a": ("unlimited", "1", "21000"), 
-			"h1_1b": ("160", "1", "16500" ),
+			"h1_ia": ("unlimited", "1", "21000"), 
+			"h1_ib": ("160", "1", "16500" ),
 			"h1_iia": ("65", "1", "11000" ),
 			"h1_iib": ("55", "1", "7000" ),
 			"h1_iiia": ("65", "1", "9500" ),
@@ -127,8 +127,8 @@ ha_matrix = {
 
 			# # Group H-2
 			
-			"h2_1a": ("unlimited", "unlimited", "21000"), 
-			"h2_1b": ("160", "3", "16500" ),
+			"h2_ia": ("unlimited", "unlimited", "21000"), 
+			"h2_ib": ("160", "3", "16500" ),
 			"h2_iia": ("65", "2", "11000" ),
 			"h2_iib": ("55", "1", "7000" ),
 			"h2_iiia": ("65", "2", "9500" ),
@@ -139,8 +139,8 @@ ha_matrix = {
 
 			# # Group H-3
 			
-			"h3_1a": ("unlimited", "unlimited", "unlimited"), 
-			"h3_1b": ("160", "6", "60000" ),
+			"h3_ia": ("unlimited", "unlimited", "unlimited"), 
+			"h3_ib": ("160", "6", "60000" ),
 			"h3_iia": ("65", "4", "26500" ),
 			"h3_iib": ("55", "2", "14000" ),
 			"h3_iiia": ("65", "4", "17500" ),
@@ -151,8 +151,8 @@ ha_matrix = {
 
 			# # Group H-4
 			
-			"h4_1a": ("unlimited", "unlimited", "unlimited"), 
-			"h4_1b": ("160", "7", "unlimited" ),
+			"h4_ia": ("unlimited", "unlimited", "unlimited"), 
+			"h4_ib": ("160", "7", "unlimited" ),
 			"h4_iia": ("65", "5", "37500" ),
 			"h4_iib": ("55", "3", "17500" ),
 			"h4_iiia": ("65", "5", "28500" ),
@@ -163,8 +163,8 @@ ha_matrix = {
 
 			# # Group H-5
 			
-			"h5_1a": ("unlimited", "4", "unlimited"), 
-			"h5_1b": ("160", "4", "unlimited" ),
+			"h5_ia": ("unlimited", "4", "unlimited"), 
+			"h5_ib": ("160", "4", "unlimited" ),
 			"h5_iia": ("65", "3", "37500" ),
 			"h5_iib": ("55", "3", "23000" ),
 			"h5_iiia": ("65", "3", "28500" ),
@@ -175,8 +175,8 @@ ha_matrix = {
 
 			# # Group I-1
 			
-			"i1_1a": ("unlimited", "unlimited", "unlimited"), 
-			"i1_1b": ("160", "9", "55000" ),
+			"i1_ia": ("unlimited", "unlimited", "unlimited"), 
+			"i1_ib": ("160", "9", "55000" ),
 			"i1_iia": ("65", "4", "19000" ),
 			"i1_iib": ("55", "3", "10000" ),
 			"i1_iiia": ("65", "4", "16500" ),
@@ -187,8 +187,8 @@ ha_matrix = {
 
 			# # Group I-2
 			
-			"i2_1a": ("unlimited", "unlimited", "unlimited"), 
-			"i2_1b": ("160", "4", "unlimited" ),
+			"i2_ia": ("unlimited", "unlimited", "unlimited"), 
+			"i2_ib": ("160", "4", "unlimited" ),
 			"i2_iia": ("65", "2", "15000" ),
 			"i2_iib": ("55", "1", "11000" ),
 			"i2_iiia": ("65", "1", "12000" ),
@@ -199,8 +199,8 @@ ha_matrix = {
 
 			# # Group I-3
 			
-			"i3_1a": ("unlimited", "unlimited", "unlimited"), 
-			"i3_1b": ("160", "4", "unlimited" ),
+			"i3_ia": ("unlimited", "unlimited", "unlimited"), 
+			"i3_ib": ("160", "4", "unlimited" ),
 			"i3_iia": ("65", "2", "15000" ),
 			"i3_iib": ("55", "1", "10000" ),
 			"i3_iiia": ("65", "2", "10500" ),
@@ -211,8 +211,8 @@ ha_matrix = {
 
 			# # Group I-4
 			
-			"i4_1a": ("unlimited", "unlimited", "unlimited"), 
-			"i4_1b": ("160", "5", "60500" ),
+			"i4_ia": ("unlimited", "unlimited", "unlimited"), 
+			"i4_ib": ("160", "5", "60500" ),
 			"i4_iia": ("65", "3", "26500" ),
 			"i4_iib": ("55", "2", "13000" ),
 			"i4_iiia": ("65", "3", "23500" ),
@@ -223,8 +223,8 @@ ha_matrix = {
 
 			# # Group M
 			
-			"m_1a": ("unlimited", "unlimited", "unlimited"), 
-			"m_1b": ("160", "11", "unlimited" ),
+			"m_ia": ("unlimited", "unlimited", "unlimited"), 
+			"m_ib": ("160", "11", "unlimited" ),
 			"m_iia": ("65", "4", "21500" ),
 			"m_iib": ("55", "2", "12500" ),
 			"m_iiia": ("65", "4", "18500" ),
@@ -235,8 +235,8 @@ ha_matrix = {
 
 			# # Group R-1
 			
-			"r1_1a": ("unlimited", "unlimited", "unlimited"), 
-			"r1_1b": ("160", "11", "unlimited" ),
+			"r1_ia": ("unlimited", "unlimited", "unlimited"), 
+			"r1_ib": ("160", "11", "unlimited" ),
 			"r1_iia": ("65", "4", "24000" ),
 			"r1_iib": ("55", "4", "16000" ),
 			"r1_iiia": ("65", "4", "24000" ),
@@ -247,8 +247,8 @@ ha_matrix = {
 
 			# # Group R-2
 			
-			"r2_1a": ("unlimited", "unlimited", "unlimited"), 
-			"r2_1b": ("160", "11", "unlimited" ),
+			"r2_ia": ("unlimited", "unlimited", "unlimited"), 
+			"r2_ib": ("160", "11", "unlimited" ),
 			"r2_iia": ("65", "4", "24000" ),
 			"r2_iib": ("55", "4", "16000" ),
 			"r2_iiia": ("65", "4", "24000" ),
@@ -259,8 +259,8 @@ ha_matrix = {
 
 			# # Group R-3
 			
-			"r3_1a": ("unlimited", "unlimited", "unlimited"), 
-			"r3_1b": ("160", "11", "unlimited" ),
+			"r3_ia": ("unlimited", "unlimited", "unlimited"), 
+			"r3_ib": ("160", "11", "unlimited" ),
 			"r3_iia": ("65", "4", "unlimited" ),
 			"r3_iib": ("55", "4", "unlimited" ),
 			"r3_iiia": ("65", "4", "unlimited" ),
@@ -271,8 +271,8 @@ ha_matrix = {
 
 			# # Group R-4
 			
-			"r4_1a": ("unlimited", "unlimited", "unlimited"), 
-			"r4_1b": ("160", "11", "unlimited" ),
+			"r4_ia": ("unlimited", "unlimited", "unlimited"), 
+			"r4_ib": ("160", "11", "unlimited" ),
 			"r4_iia": ("65", "4", "24000" ),
 			"r4_iib": ("55", "4", "16000" ),
 			"r4_iiia": ("65", "4", "24000" ),
@@ -283,8 +283,8 @@ ha_matrix = {
 
 			# # Group S-1
 			
-			"s1_1a": ("unlimited", "unlimited", "unlimited"), 
-			"s1_1b": ("160", "11", "48000" ),
+			"s1_ia": ("unlimited", "unlimited", "unlimited"), 
+			"s1_ib": ("160", "11", "48000" ),
 			"s1_iia": ("65", "4", "26000" ),
 			"s1_iib": ("55", "2", "17500" ),
 			"s1_iiia": ("65", "3", "26000" ),
@@ -295,8 +295,8 @@ ha_matrix = {
 
 			# # Group S-2
 			
-			"s2_1a": ("unlimited", "unlimited", "unlimited"), 
-			"s2_1b": ("160", "11", "79000" ),
+			"s2_ia": ("unlimited", "unlimited", "unlimited"), 
+			"s2_ib": ("160", "11", "79000" ),
 			"s2_iia": ("65", "5", "39000" ),
 			"s2_iib": ("55", "3", "26000" ),
 			"s2_iiia": ("65", "4", "39000" ),
@@ -307,8 +307,8 @@ ha_matrix = {
 
 			# # Group U
 			
-			"u_1a": ("unlimited", "unlimited", "unlimited"), 
-			"u_1b": ("160", "5", "35500" ),
+			"u_ia": ("unlimited", "unlimited", "unlimited"), 
+			"u_ib": ("160", "5", "35500" ),
 			"u_iia": ("65", "4", "19000" ),
 			"u_iib": ("55", "2", "8500" ),
 			"u_iiia": ("65", "3", "14000" ),

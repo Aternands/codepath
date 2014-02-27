@@ -2,8 +2,8 @@
 
 def actual_height(variables):
 
-	variables["actual_height"] = raw_input('We figured out that your buildings maximum allowable height is ' + str(variables["max_height"]) + 
-								' feet. Now enter the actual height.\n') 
+	variables["actual_height"] = raw_input("We figured out that your building's maximum allowable height is " + str(variables["max_height"]) + 
+								" feet. Now enter the actual height.\n") 
 
 	print "\n"
 

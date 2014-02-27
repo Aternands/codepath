@@ -3,8 +3,8 @@
 
 def actual_stories(variables):
 
-	variables["actual_stories"] = raw_input('We figured out that the allowable number of stories for your building is ' + str(variables["max_stories"]) + 
-								'. Now enter the actual number of stories above the grade plane.\n') 
+	variables["actual_stories"] = raw_input("We figured out that the allowable number of stories for your building is " + str(variables["max_stories"]) + 
+								". Now enter the actual number of stories above the grade plane.\n") 
 
 	print "\n"
 

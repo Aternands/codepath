@@ -4,6 +4,12 @@
 def sprinkler_height_increase(variables):
 
 
+	if variables["has_sprinkler"] == "no":
+		print ("Your building doesn't have an approved sprinker system throughout, so"
+				" your building numbers won't get a sprinkler system height increase.\n")
+		return variables
+
+
 	# 504.2 Exception 1
 
 	exception_one_list = [ "iib", "iiia", "iiib", "iv", "va", "ba"]

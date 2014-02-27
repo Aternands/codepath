@@ -1,68 +1,256 @@
 	
-# def public_way_status():
-# 	pw_status = raw_input("Is your building surrounded and adjoined by public ways or yards that are"
-# 							" at least 60 feet wide? Enter yes or no.\n")
+def public_way_status():
+	pw_status = raw_input("Is your building surrounded and adjoined by public ways or yards that are"
+							" at least 60 feet wide? Enter yes or no.\n")
 
-# 	valid_yes_no = ["yes", "no"]
+	valid_yes_no = ["yes", "no"]
 
-# 	if pw_status not in valid_yes_no:
-# 		print "You didn't enter yes or no. Let's try again.\n"
+	if pw_status not in valid_yes_no:
+		print "You didn't enter yes or no. Let's try again.\n"
 
-# 		print "\n"
+		print "\n"
 
-# 		return public_way_status()
+		return public_way_status()
 
-# 	if pw_status == "yes":
-# 		return pw_status
+	if pw_status == "yes":
+		return pw_status
 
-# 	if pw_status == "no":
-# 		pw_status = raw_input ("Okay, let's try this. Is your building surrounded and adjoined by public ways or yards that are"
-# 				" at least 40 feet wide? Enter yes or no.\n")
+	if pw_status == "no":
+		pw_status = raw_input ("Okay, let's try this. Is your building surrounded and adjoined by public ways or yards that are"
+				" at least 40 feet wide? Enter yes or no.\n")
 
-# 		if pw_status not in valid_yes_no:
-# 		print "You didn't enter yes or no. Let's try again.\n"
+		if pw_status not in valid_yes_no:
+			print "You didn't enter yes or no. Let's try again.\n"
+			return public_way_status
 
-# 		print "\n"
+		print "\n"
 
-# 		if pw_status == "no":
-# 			return pw_status
+		if pw_status == "no":
+			return pw_status
 
-# 		if pw_status == "yes":
-# 			reduced_pw_status = raw_input("Your building might still qualify for the special case if it meets a")#......................
+		if pw_status == "yes":
+			pw_status = raw_input("Your building might still qualify for the special case if it meets these requirements:\n"
+									"1. The reduced width shall not be allowed for more than 75 percent of the perimeter of the building.\n"
+									"2. The exterior walls facing the reduced width shall have a minimum fire-resistance rating of 3 hours.\n"
+									"3. Openings in the exterior walls facing the reduced width shall have opening protectives "
+									" with a minimum fire protection rating of 3 hours.\n"
+									" Does your building meet all of these requirements? Enter yes or no.\n")
 
+			if pw_status not in valid_yes_no:
+				print "You didn't enter yes or no. Let's try again.\n"
+				return public_way_status
 
-
-		#finish this
+			else:
+				return pw_status
 
 
 
 
 def building_area_increase(variables):
 
+	#section 507 unlimited area buildings 
+
+	#507.2
+
+	unlimited_one_list = ["f2", "s2"]
+
+	if variables["group"] in unlimited_one_list and variables["actual_stories"] < 2:
+		print "You might be eligible for a special exception that gives your building unlimited area. We'll see if you qualify.\n"
+		result = public_way_status()
+
+		if result == "yes":
+			print "Great. Your building qualifies for the special exception, and has unlimited building area.\n"
+			variables["max_area"] = "unlimited"
+			return variables
+
+		if result == "no":
+			print ("Okay, you didn't qualify for the special exception. We'll try some other things to increase your"
+					"allowable building area.\n")
+
+
+	#507.3
+
+	unlimited_two_list = ["b", "f1", "f2", "m", "s1", "s2"]
+
+	if variables["group"] in unlimited_two_list and variables["actual_stories"] < 2 and variables["has_sprinkler"] == "yes":
+		print "You might be eligible for a special exception that gives your building unlimited area. We'll see if you qualify.\n"
+		result = public_way_status()
+		
+
+		if result == "yes":
+			print "Great. Your building qualifies for the special exception, and has unlimited building area.\n"
+			variables["max_area"] = "unlimited"
+
+			# 507.3 exception 1
+
+			unlimited_four_list = ["s1", "s2"]
+			unlimited_five_list = ["ia", "ib", "iia", "iib"]
+
+			if variables["group"] in unlimited_four_list and variables["cons_type"] in unlimited_five_list:
+				rack_storage = raw_input("You might be eligible for a different special exception that gives your building unlimited height. We'll see if you qualify.\n"
+											"Is your building used for rack storage facilities that do not have access by the public? Enter yes or no.\n")
+
+				valid_yes_no = ["yes", "no"]
+
+				if rack_storage not in valid_yes_no:
+					print "You didn't enter yes or no. Let's try again.\n"
+
+					print "\n"
+
+					return building_area_increase()
+
+				if rack_storage == "no":
+					print ("Okay, you didn't qualify for that special exception.\n")
+					return variables
+
+				if rack_storage == "yes":
+					print "Great. Your building qualifies for the special exception, and has unlimited building height.\n"
+					variables["max_height"] = "unlimited"
+					return variables
+
+			else:
+				return variables
+
+		if result == "no":
+			print ("Okay, you didn't qualify for the special exception. We'll try some other things to increase your"
+					"allowable building area.\n")
 
 
 
-	#section 507 unlimited area buildings goes here
+	unlimited_three_list = ["ia", "ib", "iia", "iib", "iiia", "iiib", "iv"]
+
+	if variables["group"] == "a4" and variables["actual_stories"] < 2 and variables["cons_type"] in unlimited_three_list and variables["has_sprinkler"] == "yes":
+		print "You might be eligible for a special exception that gives your building unlimited area. We'll see if you qualify.\n"
+		result = public_way_status()
+
+		if result == "yes":
+			print "Great. Your building qualifies for the special exception, and has unlimited building area.\n"
+			variables["max_area"] = "unlimited"
+			return variables
+
+		if result == "no":
+			print ("Okay, you didn't qualify for the special exception. We'll try some other things to increase your"
+					"allowable building area.\n")
 
 
 
 
 
+	# 507.3 exception 2
+
+	if variables["group"] == "a4" and variables["actual_stories"] < 2 and variables["cons_type"] in unlimited_three_list and variables["has_sprinkler"] == "no":
+
+		indoor_sports = raw_input("You might be eligible for a special exception that gives your building unlimited area. We'll see if you qualify.\n"
+									"Here is a list of conditions:\n"
+									"1. Building has areas used for indoor participant sports\n"
+									"2. Building has exit doors directly to the outside in participant sports areas\n"
+									"3. Building is equipped with an fire alarm system with manual fire alarm boxes installed in accordance with Section 907.\n"
+									"\n"
+									"Does your building meet all of these conditions? Enter yes or no.\n")
+
+		valid_yes_no = ["yes", "no"]
+
+		if indoor_sports not in valid_yes_no:
+			print "You didn't enter yes or no. Let's try again.\n"
+
+			print "\n"
+
+			return building_area_increase()
+
+		if indoor_sports == "no":
+			print ("Okay, you didn't qualify for the special exception. We'll try some other things to increase your"
+					"allowable building area.\n")
+
+		if indoor_sports == "yes":
+			result = public_way_status()
+
+
+			if result == "yes":
+				print ("Great. Your building qualifies for the special exception, and has unlimited building area."
+						" Note that sprinklers are not required in the areas used for indoor participant sports, but"
+						" may be required in other areas of the building.\n")
+				variables["max_area"] = "unlimited"
+				return variables
+
+			if result == "no":
+				print ("Okay, you didn't qualify for the special exception. We'll try some other things to increase your"
+						"allowable building area.\n")
 
 
 
+	#add code for 507.3.1 mixed occupancy buildings
+
+
+	# 507.4 
+
+
+	unlimited_six_list = [ "b", "f1", "f2", "m", "s1", "s2"]
+
+	if variables["group"] in unlimited_six_list and variables["actual_stories"] < 3 and variables["has_sprinkler"] == "yes":
+		print "You might be eligible for a special exception that gives your building unlimited area. We'll see if you qualify.\n"
+		result = public_way_status()
+
+		if result == "yes":
+			print "Great. Your building qualifies for the special exception, and has unlimited building area.\n"
+			variables["max_area"] = "unlimited"
+			return variables
+
+		if result == "no":
+			print ("Okay, you didn't qualify for the special exception. We'll try some other things to increase your"
+					"allowable building area.\n")	
+
+		
+
+	# 507.6
+
+	unlimited_seven_list = ["iia", "iib"]
+
+	if variables["group"] == "a3" and variables["actual_stories"] < 2 and variables["cons_type"] in unlimited_seven_list and variables["has_sprinkler"] == "yes":
+		religious_worship_etc= raw_input("You might be eligible for a special exception that gives your building unlimited area. We'll see if you qualify.\n"
+									"Here are two conditions:\n"
+									"1. Building is used as a place of religious worship, community hall, dance hall, exhibition hall, gymnasium,"
+										" lecture hall, indoor swimming pool, or tennis court.\n"
+									"2. Building has no stage other than a platform.\n"
+									"\n"
+									"Does your building meet each of these conditions? Enter yes or no.\n")
+
+		valid_yes_no = ["yes", "no"]
+
+		if religious_worship_etc not in valid_yes_no:
+			print "You didn't enter yes or no. Let's try again.\n"
+
+			print "\n"
+
+			return building_area_increase()
+
+		if religious_worship_etc == "no":
+			print ("Okay, you didn't qualify for the special exception. We'll try some other things to increase your"
+					"allowable building area.\n")
+
+
+		if religious_worship_etc == "yes":
+			result = public_way_status()
+
+			if result == "no":
+				print ("Okay, you didn't qualify for the special exception. We'll try some other things to increase your"
+					"allowable building area.\n")	
+
+			if result == "yes":
+				print "Great. Your building qualifies for the special exception, and has unlimited building area.\n"
+				variables["max_area"] = "unlimited"
+				return variables	
 
 
 
-
-
-
+	# continue on from 507.7.....
 
 
 
 
 
 	#Building Area increase from frontage
+
+	print "First, we'll look at frontage."
 
 	perimeter = raw_input("Please enter the length in feet of your building's perimeter.\n")
 
